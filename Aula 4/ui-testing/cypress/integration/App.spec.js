@@ -1,33 +1,43 @@
+/// <reference types="cypress"/>
+import field from '../support/field'
 describe('App Developers Skills', () => {
 
     beforeEach(() => {
-        cy.visit('http://localhost:3000/');
+        cy.acessarSite()
+    });
+
+    it('should load skills list as the button is clicked', () => {
+        cy.get(field.BOTTON.addSkills).click()
+        cy.get('li').should('be.visible')
+        cy.get('ul').should('be.visible')
     });
 
     it('Verificando os titulos',()=>{
-        cy.get('h1').should('have.text','Developers App')
-        cy.get('.App > :nth-child(2)').should('have.text','Skill Name')
-        cy.get('.App > :nth-child(4)').should('have.text','Developers')
-        cy.get('.App > :nth-child(6)').should('have.text','Technologies')
-        cy.get('.App > :nth-child(8)').should('have.text','Roles')
+        cy.get(field.TITLE.developersApp).should('have.text','Developers App')
+        cy.get(field.TITLE.skillName).should('have.text','Skill Name')
+        cy.get(field.TITLE.developers).should('have.text','Developers')
+        cy.get(field.TITLE.technologies).should('have.text','Technologies')
+        cy.get(field.TITLE.roles).should('have.text','Roles')
     })
 
     it('verificando se os textos dos campos de textos',()=>{
-        cy.get('.App > :nth-child(3)')
+        cy.get(field.TEXT.skillNameText)
             .type('teste')
             .should('have.value','teste')
-        cy.get('.App > :nth-child(5)')
+        cy.get(field.TEXT.developersText)
             .type('teste')
             .should('have.value','teste')
-        cy.get('.App > :nth-child(7)')
+        cy.get(field.TEXT.technologiesText)
             .type('teste')
             .should('have.value','teste')
-        cy.get('.App > :nth-child(9)')
+        cy.get(field.TEXT.rolesText)
             .type('teste')
             .should('have.value','teste')
     })
 
-    it('clicando no botão Add skill',()=>{
-        cy.get('#load-skills-button').click()
+    it('Verificações no botão Add Skills',()=>{
+        cy.get(field.BOTTON.addSkills).should('be.visible')
+        cy.get(field.BOTTON.addSkills).should('have.text','Add Skills')
+        cy.get(field.BOTTON.addSkills).click()
     })
 });

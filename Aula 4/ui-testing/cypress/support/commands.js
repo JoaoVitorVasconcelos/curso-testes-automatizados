@@ -11,8 +11,11 @@
 //
 // -- This is a parent command --
 Cypress.Commands.add('clickButton', (label) => {
-    cy.get('a').contains(label).click();
-  });
+  cy.get('a').contains(label).click();
+});
+Cypress.Commands.add('acessarSite', () => {
+  cy.visit('http://localhost:3000/');
+})
 //
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
