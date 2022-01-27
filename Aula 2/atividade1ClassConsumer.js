@@ -17,7 +17,7 @@ class AdressMatcher {
      * @return street name if found in address string
      */
      findStreetName(streetName){
-         return this.stringM.findFirstMatch(streetName);
+      return this.stringM.findFirstMatch(streetName);
      }
 
      /**
