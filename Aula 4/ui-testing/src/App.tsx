@@ -58,15 +58,15 @@ const App = () => {
       </li>
     </ul></>;
 
-  function loadSkill() {
-    setShowSkill(true);
-    setShowSkills(false);
-    fetch('https://61e4d942595afe00176e51cb.mockapi.io/api/v1/skill')
-      .then(response => response.json())
-      .then(data => {
-        setSkillData(data[0]);
-      });
-  }
+  // function loadSkill() {
+  //   setShowSkill(true);
+  //   setShowSkills(false);
+  //   fetch('https://61e4d942595afe00176e51cb.mockapi.io/api/v1/skill')
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       setSkillData(data[0]);
+  //     });
+  // }
   function loadSkills() {
     setShowSkill(false);
     setShowSkills(true);
