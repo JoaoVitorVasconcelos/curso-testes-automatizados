@@ -58,15 +58,15 @@ const App = () => {
       </li>
     </ul></>;
 
-  // function loadSkill() {
-  //   setShowSkill(true);
-  //   setShowSkills(false);
-  //   fetch('https://61e4d942595afe00176e51cb.mockapi.io/api/v1/skill')
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       setSkillData(data[0]);
-  //     });
-  // }
+  function loadSkill() {
+    setShowSkill(true);
+    setShowSkills(false);
+    fetch('https://61e4d942595afe00176e51cb.mockapi.io/api/v1/skill')
+      .then(response => response.json())
+      .then(data => {
+        setSkillData(data[0]);
+      });
+  }
   function loadSkills() {
     setShowSkill(false);
     setShowSkills(true);
@@ -92,7 +92,7 @@ const App = () => {
       <input id="input-skill2" className='input1'></input>
       <label htmlFor="input1">Roles</label>
       <input id="input-skill2" className='input1'></input>
-      {/* <a id="search-button" className="button1" onClick={() => loadSkill()}>Add Skills</a> */}
+      <a id="search-button" className="button1" onClick={() => loadSkill()}>Add Skill</a>
       <a id="load-skills-button" className="button1" onClick={() => loadSkills()}>Add Skills</a>
       {showSkill ? name : ''}
       {showSkills ? listSkills : ''}
