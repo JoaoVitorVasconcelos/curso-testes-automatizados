@@ -38,7 +38,7 @@ describe('App Developers Skills', () => {
         cy.get(field.TITLE.roles).should('have.text','Roles')
     })
 
-    it.only('verificando se os textos dos campos de textos',()=>{
+    it('verificando se os textos dos campos de textos',()=>{
         cy.escrevendoNosCampos()
     })
 
