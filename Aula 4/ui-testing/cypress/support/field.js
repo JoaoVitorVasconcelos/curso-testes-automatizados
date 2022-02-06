@@ -8,7 +8,7 @@ const field = {
     },
     
     TEXT: {
-        skillNameText: '.App > :nth-child(3)',
+        skillNameText: '#input-skill',
         developersText: '.App > :nth-child(5)',
         technologiesText: '.App > :nth-child(7)',
         rolesText: '.App > :nth-child(9)',
