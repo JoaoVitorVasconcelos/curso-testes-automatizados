@@ -15,6 +15,5 @@ const field = {
     BOTTON: {
         addSkills: '#load-skills-button',
     }
-
 }
 export default field

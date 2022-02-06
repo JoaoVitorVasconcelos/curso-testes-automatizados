@@ -21,18 +21,7 @@ describe('App Developers Skills', () => {
     })
 
     it('verificando se os textos dos campos de textos',()=>{
-        cy.get(field.TEXT.skillNameText)
-            .type('teste')
-            .should('have.value','teste')
-        cy.get(field.TEXT.developersText)
-            .type('teste')
-            .should('have.value','teste')
-        cy.get(field.TEXT.technologiesText)
-            .type('teste')
-            .should('have.value','teste')
-        cy.get(field.TEXT.rolesText)
-            .type('teste')
-            .should('have.value','teste')
+        cy.escrevendoNosCampos()
     })
 
     it('Verificações no botão Add Skills',()=>{
