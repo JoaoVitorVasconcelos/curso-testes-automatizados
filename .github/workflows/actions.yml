@@ -44,7 +44,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          working-directory: ./Aula 4/ui-testing
+          working-directory: ./Aula 5/ui-testing
           build: npm run build
           start: npm start
 
