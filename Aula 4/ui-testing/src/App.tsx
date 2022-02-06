@@ -92,7 +92,7 @@ const App = () => {
       <input id="input-skill2" className='input1'></input>
       <label htmlFor="input1">Roles</label>
       <input id="input-skill2" className='input1'></input>
-      <a id="search-button" className="button1" onClick={() => loadSkill()}>Add Skill</a>
+      <a id="search-button" className="button2" onClick={() => loadSkill()}>Add Skill</a>
       <a id="load-skills-button" className="button1" onClick={() => loadSkills()}>Add Skills</a>
       {showSkill ? name : ''}
       {showSkills ? listSkills : ''}
