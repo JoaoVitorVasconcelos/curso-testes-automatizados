@@ -33,6 +33,9 @@
     "coverageReport": [
       "html"
     ],
-    "reporters": ["default", "jest-stare"]
+    "reporters": [
+      "default",
+      "jest-stare"
+    ]
   }
 }

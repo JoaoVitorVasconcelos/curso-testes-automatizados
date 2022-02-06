@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import './App.css';
 import { useState } from 'react';
 
@@ -22,7 +21,6 @@ const App = () => {
   }]);
 
   const [showSkill, setShowSkill] = useState(false);
-  
   const [showSkills, setShowSkills] = useState(false);
 
   let listSkills = skillsData.map((skill, index) =>
@@ -58,20 +56,10 @@ const App = () => {
       </ul>
     </li>
   </ul></>;
-  
-  function loadSkill() {
-    setShowSkill(true);
-    setShowSkills(false);
-    fetch('./api/v1/skill')
-        .then(response => response.json())
-      .then(data => {
-        setSkillData(data[0]);
-        });
-  }
   function loadSkills() {
     setShowSkill(false);
     setShowSkills(true);
-    fetch('./api/v1/skills')
+    fetch('https://61e4d942595afe00176e51cb.mockapi.io/api/v1/skills')
         .then(response => response.json())
       .then(data => {
         setSkillsData(data);
@@ -85,10 +73,15 @@ const App = () => {
             Developers App
           </h1>
       </header>
-      <label htmlFor="input1">Type the skill you would like to search</label>
+      <label htmlFor="input1">Skill Name</label>
         <input id="input-skill" className='input1'></input>
-      <a id="search-button" className="button1" onClick={() => loadSkill()}>Search</a>
-        <a id="load-skills-button" className="button1" onClick={() => loadSkills()}>All Skills</a>
+        <label htmlFor="input1">Developers</label>
+        <input id="input-skill" className='input1'></input>
+        <label htmlFor="input1">Technologies</label>
+        <input id="input-skill" className='input1'></input>
+        <label htmlFor="input1">Roles</label>
+        <input id="input-skill" className='input1'></input>
+        <a id="load-skills-button" className="button1" onClick={() => loadSkills()}>Add Skills</a>
           {showSkill? name : ''}
           {showSkills? listSkills: ''}
     </div>
