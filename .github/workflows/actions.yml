@@ -32,9 +32,9 @@ jobs:
         run: npm run test
       - working-directory: ./Aula 3/client
         run: npm run build
-      - working-directory: ./Aula 3/server
+      - working-directory: ./Aula 4/server
         run: npm install
-      - working-directory: ./Aula 3/server
+      - working-directory: ./Aula 4/server
         run: npm run test
   cypress-run:
     runs-on: ubuntu-latest
